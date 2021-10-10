@@ -1,0 +1,9 @@
+digraph G {
+"robot_footprint" -> "imu_link"[label=" Broadcaster: /mpu6050_serial_to_imu_node\nAverage rate: 66.867\nBuffer length: 4.98\nMost recent transform: 1625097988.566\nOldest transform: 1625097983.586\n"];
+"odom" -> "robot_footprint"[label=" Broadcaster: /rf2o_laser_odometry\nAverage rate: 6.138\nBuffer length: 4.887\nMost recent transform: 1625097988.192\nOldest transform: 1625097983.305\n"];
+"robot_footprint" -> "laser"[label=" Broadcaster: /base_to_laser_broadcaster\nAverage rate: 25.075\nBuffer length: 4.945\nMost recent transform: 1625097988.573\nOldest transform: 1625097983.628\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1625097988.6005683"[ shape=plaintext ] ;
+}->"odom";
+}

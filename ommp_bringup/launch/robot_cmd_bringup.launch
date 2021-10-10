@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+ 
+  
+  <!-- Start rosserial Arduino node -->
+  <node name="serial_node" pkg="rosserial_python" type="serial_node.py" output="screen">
+      <rosparam file="$(find ommp_bringup)/config/start/serial_params.yaml" command="load" />
+  </node>
+
+  <node name="vel_to_arduino" pkg="ommp_bringup" type="cmd_vel_mux" respawn="false"
+     output="screen"/>
+
+  
+</launch>
+

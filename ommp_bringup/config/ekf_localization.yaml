@@ -1,0 +1,28 @@
+#Configuation for robot odometry EKF
+#
+frequency: 10
+two_d_mode : true
+publish_tf: true
+transform_time_offset : 0.001
+predict_to_current_time : true
+
+odom0: /odom
+odom0_config: [false, false, false,
+               false, false, false,
+               true, true, true,
+               false, false, true,
+               false, false, false]
+odom0_differential: false
+
+imu0: /imu/data
+imu0_config: [false, false, false,
+              true, true, true,
+              false, false, false,
+              true, true, true,
+              false, false, false]
+imu0_differential: false
+
+map_frame: map
+odom_frame: odom
+base_link_frame: robot_footprint
+world_frame: odom

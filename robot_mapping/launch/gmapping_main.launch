@@ -1,0 +1,7 @@
+<launch>
+
+  <!--- Run gmapping -->
+  <include file="$(find robot_mapping)/launch/include/gmapping.launch" />
+
+
+</launch>
